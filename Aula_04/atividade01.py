@@ -17,7 +17,7 @@ query2 = 'SELECT produto, preco FROM materiais_construcao;'
 query3 = 'SELECT * FROM materiais_construcao WHERE categoria = "cimento";' 
 query4 = 'SELECT * FROM materiais_construcao WHERE `preco` > 200 ORDER BY `preco`;'
 
-# Executando as consultas separadamente (Corrigido: pd.read_sql aceita uma query por vez)
+# Executando as consultas separadamente 
 df_todos_produtos = pd.read_sql(query1, engine)
 df_apenas_precos  = pd.read_sql(query2, engine)
 df_cimentos       = pd.read_sql(query3, engine)
